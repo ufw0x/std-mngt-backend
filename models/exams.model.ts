@@ -10,7 +10,7 @@ const examSchema: Schema<Exam> = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'classes'
     },
-    markedBy: {
+    marks: {
         type: Schema.Types.ObjectId,
         ref: 'admins'
     },
@@ -18,11 +18,7 @@ const examSchema: Schema<Exam> = new Schema({
         type: Schema.Types.Date,
         required: true
     },
-    hash: {
-        type: Schema.Types.String,  // studentId+classId+markedBy+heldIn -----> hash
-        required: true
-    },
-    previousHash: {
+    title: {
         type: Schema.Types.String,
         required: true
     }

@@ -28,10 +28,9 @@ export interface Class{
 export interface Exam{
     studentId: Schema.Types.ObjectId,
     classId: Schema.Types.ObjectId,
-    markedBy: Schema.Types.ObjectId,
+    marks: Schema.Types.ObjectId,
     heldIn:Schema.Types.Date,
-    hash: Schema.Types.String,
-    previousHash: Schema.Types.String
+    title:string
 }
 
 export interface Payment{
@@ -39,7 +38,7 @@ export interface Payment{
     classId:Schema.Types.ObjectId,
     markedBy:Schema.Types.ObjectId,
     forMonth:Schema.Types.String,
-    year:Schema.Types.Number
+    year:string
 }
 
 export interface Attendence{
